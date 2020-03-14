@@ -6,7 +6,7 @@ int SIZE = 1;
 
 int main(int argc, char const *argv[])
 {
-	int *array = malloc(SIZE), sum;
+	int *array = malloc(SIZE * sizeof(int)), sum;
 	float average;
 	char answer[] = "Y";
 
@@ -19,7 +19,7 @@ int main(int argc, char const *argv[])
 
 		if (strcmp(answer, "Y") == 0) {
 			SIZE++;
-			array = realloc(array, SIZE);
+			array = realloc(array, SIZE * sizeof(int));
 		}
 	}
 
