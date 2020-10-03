@@ -13,5 +13,7 @@ int main() {
         return 1;
     }
 
+    // Free the allocated memory
+    free(ptr);
     return 0;
 }
